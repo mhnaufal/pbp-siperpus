@@ -5,34 +5,52 @@
     android:id="@+id/showLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
+
     android:background="@drawable/backgroudperpus"
+    android:padding="10dp"
     tools:context=".MainActivity">
+
+<!--    TODO: Buat tulisan "Daftar Anggota" di header-->
+<!--    <TextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Daftar Anggota"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="23sp"-->
+<!--        android:background="@color/black"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <Button
         android:id="@+id/buttonBuatAnggota"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/buat_anggota"
         android:layout_margin="10dp"
-        android:textColor="#212121"
+        android:text="@string/buat_anggota"
+        android:textColor="#FFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-<!--    <Button-->
-<!--        android:id="@+id/buttonRefresh"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_margin="10dp"-->
-<!--        android:text="@string/refresh"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
+    <!--    <Button-->
+    <!--        android:id="@+id/buttonRefresh"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="10dp"-->
+    <!--        android:text="@string/refresh"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
 
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefresh"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:alpha="1"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="9dp">
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -44,7 +62,11 @@
                 android:id="@+id/textResult"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000"
+                android:layout_margin="10dp"
+                android:alpha="1"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"

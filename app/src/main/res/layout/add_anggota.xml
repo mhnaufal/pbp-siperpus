@@ -8,6 +8,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:alpha="1"
         android:background="@drawable/bg">
 
         <LinearLayout
@@ -15,16 +16,18 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             tools:context=".AddAnggotaActivity">
-            
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="20dp"
-                android:text="Tambah Anggota"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="Tambah Anggota 👩‍💼"
                 android:textColor="@android:color/black"
-                android:textSize="20sp" />
-            
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="356dp"
                 android:layout_height="wrap_content"
@@ -34,23 +37,24 @@
                 <TextView
                     android:layout_width="65dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
                     android:text="NIM"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=":"
                     android:textColor="@android:color/black" />
+
                 <EditText
                     android:id="@+id/nim"
-                    android:layout_width="296dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:autofillHints="24060119130000"
                     android:hint="@string/masukkan_nim"
-                    android:inputType="text"
-                    android:textSize="14sp"/>
+                    android:inputType="text" />
             </LinearLayout>
 
             <LinearLayout
@@ -62,23 +66,24 @@
                 <TextView
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="25dp"
+                    android:layout_marginEnd="25dp"
                     android:text="Nama"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=":"
                     android:textColor="@android:color/black" />
+
                 <EditText
                     android:id="@+id/nama"
-                    android:layout_width="296dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:autofillHints="Johny"
                     android:hint="@string/masukkan_nama"
-                    android:inputType="text"
-                    android:textSize="14sp"/>
+                    android:inputType="text" />
             </LinearLayout>
 
             <LinearLayout
@@ -90,15 +95,17 @@
                 <TextView
                     android:layout_width="72dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="3dp"
+                    android:layout_marginEnd="3dp"
                     android:text="Password"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=":"
                     android:textColor="@android:color/black" />
+
                 <EditText
                     android:id="@+id/password"
                     android:layout_width="match_parent"
@@ -118,16 +125,17 @@
                 <TextView
                     android:layout_width="72dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="3dp"
+                    android:layout_marginEnd="3dp"
                     android:text="Alamat"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=":"
                     android:textColor="@android:color/black" />
-                
+
                 <EditText
                     android:id="@+id/alamat"
                     android:layout_width="match_parent"
@@ -146,16 +154,17 @@
                 <TextView
                     android:layout_width="67dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"
                     android:text="Kota"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=":"
                     android:textColor="@android:color/black" />
-                
+
                 <EditText
                     android:id="@+id/kota"
                     android:layout_width="match_parent"
@@ -174,16 +183,17 @@
                 <TextView
                     android:layout_width="67dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"
                     android:text="Email"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=":"
                     android:textColor="@android:color/black" />
-                
+
                 <EditText
                     android:id="@+id/email"
                     android:layout_width="match_parent"
@@ -203,17 +213,18 @@
                 <TextView
                     android:layout_width="67dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_marginBottom="15dp"
                     android:text="Nomor Telepon"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=":"
                     android:textColor="@android:color/black" />
-                
+
                 <EditText
                     android:id="@+id/telp"
                     android:layout_width="match_parent"
