@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import java.util.List;
 
@@ -20,15 +22,17 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
     private TextView textResult;
+    SwipeRefreshLayout swipeRefresh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ConstraintLayout mainLayout = (ConstraintLayout) findViewById(R.id.showLayout);
         textResult = findViewById(R.id.textResult);
         Button buttonBuatAnggota = findViewById(R.id.buttonBuatAnggota);
-        Button buttonRefresh = findViewById(R.id.buttonRefresh);
+        swipeRefresh = findViewById(R.id.swipeRefresh);
 
         buttonBuatAnggota.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,9 +42,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        buttonRefresh.setOnClickListener(callGetAnggota());
-
         callGetAnggota();
+        swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                textResult.setText("");
+                callGetAnggota();
+                swipeRefresh.setRefreshing(false);
+            }
+        });
+
+
+
+
     }
 
     private View.OnClickListener callGetAnggota() {
@@ -70,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                     content = content + "Alamat: " + anggota.getAlamat() + "\n";
                     content = content + "Kota: " + anggota.getKota() + "\n";
                     content = content + "Email: " + anggota.getEmail() + "\n";
-                    content = content + "Telepon: " + anggota.getTelp() + "\n";
+                    content = content + "Telepon: " + anggota.getTelp() + "\n\n";
 
                     textResult.append(content);
                 }
