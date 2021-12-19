@@ -1,86 +1,227 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/bg">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             tools:context=".AddAnggotaActivity">
-
-            <EditText
-                android:id="@+id/nim"
-                android:layout_width="match_parent"
+            
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginTop="40dp"
-                android:autofillHints="24060119130000"
-                android:hint="@string/masukkan_nim"
-                android:inputType="text" />
-
-            <EditText
-                android:id="@+id/nama"
-                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:text="Tambah Anggota"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+            
+            <LinearLayout
+                android:layout_width="356dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginTop="40dp"
-                android:autofillHints="Johny"
-                android:hint="@string/masukkan_nama"
-                android:inputType="text" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp">
 
-            <EditText
-                android:id="@+id/password"
-                android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="NIM"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+                <EditText
+                    android:id="@+id/nim"
+                    android:layout_width="296dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="24060119130000"
+                    android:hint="@string/masukkan_nim"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="356dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:autofillHints="12341234"
-                android:hint="@string/masukkan_password"
-                android:inputType="text"
-                tools:ignore="TextFields" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp">
 
-            <EditText
-                android:id="@+id/alamat"
-                android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="25dp"
+                    android:text="Nama"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+                <EditText
+                    android:id="@+id/nama"
+                    android:layout_width="296dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Johny"
+                    android:hint="@string/masukkan_nama"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="356dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:autofillHints="Jl. Jalan"
-                android:hint="@string/masukkan_alamat"
-                android:inputType="text" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp">
 
-            <EditText
-                android:id="@+id/kota"
-                android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:text="Password"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="12341234"
+                    android:hint="@string/masukkan_password"
+                    android:inputType="text"
+                    tools:ignore="TextFields" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="356dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:autofillHints="Semarang"
-                android:hint="@string/masukkan_kota"
-                android:inputType="text" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp">
 
-            <EditText
-                android:id="@+id/email"
-                android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:text="Alamat"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+                
+                <EditText
+                    android:id="@+id/alamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Jl. Jalan"
+                    android:hint="@string/masukkan_alamat"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="356dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:autofillHints="halo@unchdeep.id"
-                android:hint="@string/masukkan_email"
-                android:inputType="text"
-                tools:ignore="TextFields" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp">
 
-            <EditText
-                android:id="@+id/telp"
-                android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="67dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:text="Kota"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+                
+                <EditText
+                    android:id="@+id/kota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Semarang"
+                    android:hint="@string/masukkan_kota"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="356dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:autofillHints="08123456788"
-                android:hint="@string/masukkan_nomor_telepon"
-                android:inputType="text" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp">
 
+                <TextView
+                    android:layout_width="67dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:text="Email"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+                
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="halo@unchdeep.id"
+                    android:hint="@string/masukkan_email"
+                    android:inputType="text"
+                    tools:ignore="TextFields" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="356dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="67dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Nomor Telepon"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textColor="@android:color/black" />
+                
+                <EditText
+                    android:id="@+id/telp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="08123456788"
+                    android:hint="@string/masukkan_nomor_telepon"
+                    android:inputType="text" />
+            </LinearLayout>
             <!--button for adding data-->
             <Button
                 android:id="@+id/idBtnPost"
