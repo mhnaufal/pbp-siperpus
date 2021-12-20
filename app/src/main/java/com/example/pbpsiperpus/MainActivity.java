@@ -14,6 +14,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import java.util.List;
 
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -32,8 +33,16 @@ public class MainActivity extends AppCompatActivity {
         ConstraintLayout mainLayout = (ConstraintLayout) findViewById(R.id.showLayout);
         textResult = findViewById(R.id.textResult);
         Button buttonBuatAnggota = findViewById(R.id.buttonBuatAnggota);
+        Button buttonHapusAnggota = findViewById(R.id.buttonHapusAnggota);
         swipeRefresh = findViewById(R.id.swipeRefresh);
 
+        buttonHapusAnggota.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, DeleteAnggotaActivity.class);
+                startActivity(intent);
+            }
+        });
         buttonBuatAnggota.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
 
         callGetAnggota();
         swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -52,9 +63,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
+        //updateAnggota();
     }
 
     private View.OnClickListener callGetAnggota() {
@@ -98,4 +107,8 @@ public class MainActivity extends AppCompatActivity {
         });
         return null;
     }
+
+//    private void updateAnggota() {
+//        Anggota anggota = new Anggota()
+//    }
 }

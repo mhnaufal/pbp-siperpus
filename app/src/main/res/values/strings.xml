@@ -9,7 +9,12 @@
     <string name="masukkan_email">Masukkan e-mail</string>
     <string name="masukkan_nomor_telepon">Masukkan Nomor Telepon</string>
     <string name="tambah">Tambah</string>
+    <string name="hapus">Hapus</string>
     <string name="hasil">Hasil</string>
-    <string name="refresh">🔄Refresh</string>
+    <string name="hapus_anggota">🗑️Hapus</string>
     <string name="loading">Loading... 🌐</string>
+    <string name="title_activity_bottom">BottomActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

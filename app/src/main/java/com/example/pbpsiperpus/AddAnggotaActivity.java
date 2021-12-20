@@ -44,17 +44,24 @@ public class AddAnggotaActivity extends AppCompatActivity {
         postDataBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (nama.getText().toString().isEmpty() || password.getText().toString().isEmpty() || email.getText().toString().isEmpty() || kota.getText().toString().isEmpty() || telp.getText().toString().isEmpty()) {
-                    Toast.makeText(AddAnggotaActivity.this, "Silakan isi data dengan lengkap!", Toast.LENGTH_SHORT).show();
+                if (nama.getText().toString().isEmpty() || password.getText().toString().isEmpty()
+                        || email.getText().toString().isEmpty() || kota.getText().toString().isEmpty()
+                        || telp.getText().toString().isEmpty()) {
+                    Toast.makeText(AddAnggotaActivity.this, "Silakan isi data dengan lengkap!",
+                            Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                createAnggota(nim.getText().toString(), nama.getText().toString(), email.getText().toString(), password.getText().toString(), alamat.getText().toString(), kota.getText().toString(), telp.getText().toString());
+                createAnggota(nim.getText().toString(), nama.getText().toString(),
+                        email.getText().toString(), password.getText().toString(),
+                        alamat.getText().toString(), kota.getText().toString(),
+                        telp.getText().toString());
             }
         });
     }
 
-    private void createAnggota(String nim, String nama, String email, String password, String alamat, String kota, String telp) {
+    private void createAnggota(String nim, String nama, String email, String password,
+                               String alamat, String kota, String telp) {
         loadingPB.setVisibility(View.VISIBLE);
 
         Retrofit retrofit = new Retrofit.Builder()
