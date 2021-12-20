@@ -1,276 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-
-        android:alpha="1"
-        android:background="@drawable/bg">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            tools:context=".AddAnggotaActivity">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:text="Tambah Anggota 👩‍💼"
-                android:textColor="@android:color/black"
-                android:textSize="25sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_marginLeft="15dp"
-                android:layout_width="356dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="8dp">
-
-                <TextView
-                    android:layout_width="65dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:text="NIM"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=":"
-                    android:textColor="@android:color/black" />
-
-                <EditText
-                    android:id="@+id/nim"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autofillHints="24060119130000"
-                    android:hint="@string/masukkan_nim"
-                    android:inputType="text" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="1" android:background="@drawable/bg">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" tools:context=".AddAnggotaActivity">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:layout_marginTop="15dp" android:layout_marginBottom="40dp" android:text="Tambah Anggota" android:textColor="@android:color/white" android:textSize="25sp" android:textStyle="bold"/>
+            <LinearLayout android:layout_width="356dp" android:layout_height="wrap_content" android:background="@drawable/btnputih" android:layout_gravity="center_horizontal" android:layout_marginBottom="8dp">
+                <TextView android:layout_width="65dp" android:layout_height="wrap_content" android:layout_marginEnd="10dp" android:text=" NIM" android:textColor="@android:color/black" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" android:textColor="@android:color/black"/>
+                <EditText android:id="@+id/nim" android:layout_width="match_parent" android:layout_height="wrap_content" android:autofillHints="24060119130000" android:hint="@string/masukkan_nim" android:inputType="text"/>
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginLeft="15dp"
-                android:layout_width="356dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="8dp">
-
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="25dp"
-                    android:text="Nama"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=":"
-                    android:textColor="@android:color/black" />
-
-                <EditText
-                    android:id="@+id/nama"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autofillHints="Johny"
-                    android:hint="@string/masukkan_nama"
-                    android:inputType="text" />
+            <LinearLayout android:layout_width="356dp" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:background="@drawable/btnputih" android:layout_marginBottom="8dp">
+                <TextView android:layout_width="50dp" android:layout_height="wrap_content" android:layout_marginEnd="25dp" android:text=" Nama" android:textColor="@android:color/black" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" android:textColor="@android:color/black"/>
+                <EditText android:id="@+id/nama" android:layout_width="match_parent" android:layout_height="wrap_content" android:autofillHints="Johny" android:hint="@string/masukkan_nama" android:inputType="text"/>
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginLeft="15dp"
-                android:layout_width="356dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="8dp">
-
-                <TextView
-                    android:layout_width="72dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="3dp"
-                    android:text="Password"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=":"
-                    android:textColor="@android:color/black" />
-
-                <EditText
-                    android:id="@+id/password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autofillHints="12341234"
-                    android:hint="@string/masukkan_password"
-                    android:inputType="text"
-                    tools:ignore="TextFields" />
+            <LinearLayout android:layout_width="356dp" android:layout_height="wrap_content" android:background="@drawable/btnputih" android:layout_gravity="center_horizontal" android:layout_marginBottom="8dp">
+                <TextView android:layout_width="72dp" android:layout_height="wrap_content" android:layout_marginEnd="3dp" android:text=" Password" android:textColor="@android:color/black" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" android:textColor="@android:color/black"/>
+                <EditText android:id="@+id/password" android:layout_width="match_parent" android:layout_height="wrap_content" android:autofillHints="12341234" android:hint="@string/masukkan_password" android:inputType="text" tools:ignore="TextFields"/>
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginLeft="15dp"
-                android:layout_width="356dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="8dp">
-
-                <TextView
-                    android:layout_width="72dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="3dp"
-                    android:text="Alamat"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=":"
-                    android:textColor="@android:color/black" />
-
-                <EditText
-                    android:id="@+id/alamat"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autofillHints="Jl. Jalan"
-                    android:hint="@string/masukkan_alamat"
-                    android:inputType="text" />
+            <LinearLayout android:layout_width="356dp" android:layout_height="wrap_content" android:background="@drawable/btnputih" android:layout_gravity="center_horizontal" android:layout_marginBottom="8dp">
+                <TextView android:layout_width="72dp" android:layout_height="wrap_content" android:layout_marginEnd="3dp" android:text=" Alamat" android:textColor="@android:color/black" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" android:textColor="@android:color/black"/>
+                <EditText android:id="@+id/alamat" android:layout_width="match_parent" android:layout_height="wrap_content" android:autofillHints="Jl. Jalan" android:hint="@string/masukkan_alamat" android:inputType="text"/>
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginLeft="15dp"
-                android:layout_width="356dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="8dp">
-
-                <TextView
-                    android:layout_width="67dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:text="Kota"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=":"
-                    android:textColor="@android:color/black" />
-
-                <EditText
-                    android:id="@+id/kota"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autofillHints="Semarang"
-                    android:hint="@string/masukkan_kota"
-                    android:inputType="text" />
+            <LinearLayout android:layout_width="356dp" android:layout_height="wrap_content" android:background="@drawable/btnputih" android:layout_gravity="center_horizontal" android:layout_marginBottom="8dp">
+                <TextView android:layout_width="67dp" android:layout_height="wrap_content" android:layout_marginEnd="8dp" android:text=" Kota" android:textColor="@android:color/black" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" android:textColor="@android:color/black"/>
+                <EditText android:id="@+id/kota" android:layout_width="match_parent" android:layout_height="wrap_content" android:autofillHints="Semarang" android:hint="@string/masukkan_kota" android:inputType="text"/>
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginLeft="15dp"
-                android:layout_width="356dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="8dp">
-
-                <TextView
-                    android:layout_width="67dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:text="Email"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=":"
-                    android:textColor="@android:color/black" />
-
-                <EditText
-                    android:id="@+id/email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autofillHints="halo@unchdeep.id"
-                    android:hint="@string/masukkan_email"
-                    android:inputType="text"
-                    tools:ignore="TextFields" />
+            <LinearLayout android:layout_width="356dp" android:layout_height="wrap_content" android:background="@drawable/btnputih" android:layout_gravity="center_horizontal" android:layout_marginBottom="8dp">
+                <TextView android:layout_width="67dp" android:layout_height="wrap_content" android:layout_marginEnd="8dp" android:text=" Email" android:textColor="@android:color/black" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" android:textColor="@android:color/black"/>
+                <EditText android:id="@+id/email" android:layout_width="match_parent" android:layout_height="wrap_content" android:autofillHints="halo@unchdeep.id" android:hint="@string/masukkan_email" android:inputType="text" tools:ignore="TextFields"/>
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginLeft="15dp"
-                android:layout_width="356dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="8dp">
-
-                <TextView
-                    android:layout_width="67dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="15dp"
-                    android:text="Nomor Telepon"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=":"
-                    android:textColor="@android:color/black" />
-
-                <EditText
-                    android:id="@+id/telp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autofillHints="08123456788"
-                    android:hint="@string/masukkan_nomor_telepon"
-                    android:inputType="text" />
+            <LinearLayout android:layout_width="356dp" android:layout_height="wrap_content" android:background="@drawable/btnputih" android:layout_gravity="center_horizontal" android:layout_marginBottom="8dp">
+                <TextView android:layout_width="67dp" android:layout_height="wrap_content" android:layout_marginEnd="8dp" android:layout_marginBottom="15dp" android:text=" No.Telp" android:textColor="@android:color/black" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" android:textColor="@android:color/black"/>
+                <EditText android:id="@+id/telp" android:layout_width="match_parent" android:layout_height="wrap_content" android:autofillHints="08123456788" android:hint="@string/masukkan_nomor_telepon" android:inputType="text"/>
             </LinearLayout>
-            <!--button for adding data-->
-            <Button
-                android:id="@+id/idBtnPost"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:text="@string/tambah"
-                android:textAllCaps="false" />
-
-            <!--text view for displaying our API response-->
-            <TextView
-                android:id="@+id/idTVResponse"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:gravity="center_horizontal"
-                android:text="@string/hasil"
-                android:textAlignment="center"
-                android:textSize="15sp" />
-
-            <!--progress bar for loading -->
-            <ProgressBar
-                android:id="@+id/idLoadingPB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:visibility="gone" />
-
+            <!-- button for adding data -->
+            <Button android:id="@+id/idBtnPost" android:background="@drawable/button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="20dp" android:text="@string/tambah" android:textAllCaps="false"/>
+            <!-- text view for displaying our API response -->
+            <TextView android:id="@+id/idTVResponse" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:gravity="center_horizontal" android:text="@string/hasil" android:textColor="@android:color/white" android:textAlignment="center" android:textSize="15sp"/>
+            <!-- progress bar for loading  -->
+            <ProgressBar android:id="@+id/idLoadingPB" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:visibility="gone"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
