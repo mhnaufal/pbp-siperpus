@@ -1,15 +1,15 @@
 <resources>
     <string name="app_name">Siperpus App</string>
     <string name="buat_anggota">➕Anggota</string>
-    <string name="masukkan_nim">24060119110033</string>
-    <string name="masukkan_nama">Johny Deep</string>
-    <string name="masukkan_password">12341234</string>
-    <string name="masukkan_alamat">Jl. Jalan</string>
-    <string name="masukkan_kota">Semarang</string>
-    <string name="masukkan_email">john@deep.id</string>
-    <string name="masukkan_nomor_telepon">081234567891</string>
+    <string name="masukkan_nim">Masukkan NIM</string>
+    <string name="masukkan_nama">Masukkan Nama</string>
+    <string name="masukkan_password">Masukkan Password</string>
+    <string name="masukkan_alamat">Masukkan Alamat</string>
+    <string name="masukkan_kota">Masukkan Kota</string>
+    <string name="masukkan_email">Masukkan e-mail</string>
+    <string name="masukkan_nomor_telepon">Masukkan Nomor Telepon</string>
     <string name="tambah">Tambah</string>
     <string name="hasil">Hasil</string>
-    <string name="refresh">Refresh</string>
+    <string name="refresh">🔄Refresh</string>
     <string name="loading">Loading... 🌐</string>
 </resources>
